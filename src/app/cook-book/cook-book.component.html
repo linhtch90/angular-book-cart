@@ -1,0 +1,12 @@
+<p>Cookbooks that we have:</p>
+
+<div *ngFor="let book of cookBookList">
+  <p>ID: {{book.id}}</p>
+  <h3>{{book.title}}</h3>
+  <p>Author: {{book.author}}</p>
+  <p>Pages: {{book.pages}}</p>
+  <a [routerLink]="['/cookbook',book.id]"><button >Content Summary</button></a><br /><br />
+  <button (click)="addToCart(book)">Buy</button>
+  <a [routerLink]="['/cart']"><button>View Cart</button></a>
+  <p>-----</p>
+</div>
