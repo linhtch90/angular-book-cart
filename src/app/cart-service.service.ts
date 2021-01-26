@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartServiceService {
-    booksInCart = [];
+    booksInCart: Array<any> = [];
     numberOfBooks = 0;
 
-    addToCart(book) {
+    addToCart(book: any) {
 	if (this.booksInCart.length > 0) {
 	    for (let i = 0; i < this.booksInCart.length; i++) {
 		if (book.id === this.booksInCart[i].id) {

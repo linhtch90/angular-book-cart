@@ -11,7 +11,7 @@ import {cookBookList} from '../CookBookList';
 export class CookBookComponent implements OnInit {
     cookBookList = cookBookList;
 
-    addToCart(book) {
+    addToCart(book: any) {
 	this.cartService.addToCart(book);
     }
 
